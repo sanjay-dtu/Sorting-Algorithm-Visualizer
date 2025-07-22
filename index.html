@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Sorting Visualizer</h1>
+
+  <div class="controls">
+    <button onclick="generateBars()">Generate</button>
+    <button onclick="startSort('bubble')">Bubble Sort</button>
+    <button onclick="startSort('selection')">Selection Sort</button>
+    <button onclick="startSort('insertion')">Insertion Sort</button>
+    <button onclick="startSort('merge')">Merge Sort</button>
+    <button onclick="startSort('quick')">Quick Sort</button>
+  </div>
+
+  <div class="sliders">
+    <label>Size: <input type="range" id="sizeSlider" min="10" max="100" value="40"></label>
+    <label>Speed: <input type="range" id="speedSlider" min="1" max="100" value="50"></label>
+  </div>
+
+  <div class="bar-container" id="bar-container"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Space</th>
+      </tr>
+    </thead>
+    <tbody id="complexity-table"></tbody>
+  </table>
+
+  <script src="js/generate.js"></script>
+  <script src="js/visualizer.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/bubble.js"></script>
+  <script src="js/selection.js"></script>
+  <script src="js/insertion.js"></script>
+  <script src="js/merge.js"></script>
+  <script src="js/quick.js"></script>
+  <script src="data/complexities.js"></script>
+</body>
+</html>
